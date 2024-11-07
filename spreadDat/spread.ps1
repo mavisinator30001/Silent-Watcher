@@ -1,1 +1,1 @@
-xcopy ".\virus"  'C:\virus' /v /s /e /i
+h
