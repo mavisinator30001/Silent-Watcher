@@ -9,4 +9,4 @@ $pathAfterCopy = "C:\Users\$localUsername\Documents\virus"
 
 Copy-Item -Path $pathBeforeCopy -Destination $pathAfterCopy -Recurse
 Copy-Item -Path $pullPathBeforeCopy -Destination $pathAfterCopy\Virus
-Invoke-Expression "$pathAfterCopy\Virus\pull.ps1"
+Invoke-Expression "& $pathAfterCopy\Virus\pull.ps1"
