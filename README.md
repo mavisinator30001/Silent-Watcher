@@ -2,7 +2,7 @@
 
 This is a combination of a DuckyScript payload and a virus template that I created.
 To use it, compile `payload.txt` and add it to the root directory of your hotplug. BE SURE TO READ THE CODE!
-Some variables are specific to your use case and you may find it in your interest to change the for your purposes.
+Some variables are specific to your use case and you may find it in your interest to change them for your intended purposes.
 This program is designed to work on any machine that operates on Windows 11 and higher.
 
 # How Does It Work?
