@@ -22,5 +22,5 @@ The copy directory can be changed as well by changing the PATH in both the `call
 
 I do not take responsibility for any malicious use of this program by others. This is a proof of concept for my own sense of accomplishment, and as such is intended only for educational use. Use this program at your own discretion!
 
-## The Creator
- - Mavis
+                                                                                                             **The Creator**
+                                                                                                                - Mavis
