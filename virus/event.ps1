@@ -22,7 +22,7 @@ Function Register-Watcher {
         EnableRaisingEvents = $true
     }
 
-    $changeAction = [scriptblock]::Create('
+   $changeAction = [scriptblock]::Create('
         # This is the code which will be executed every time a file change is detected
         $path = $Event.SourceEventArgs.FullPath
         $name = $Event.SourceEventArgs.Name
@@ -32,7 +32,7 @@ Function Register-Watcher {
         Invoke-Expression -Command .\call.ps1
         if (Test-Path -Path "C:\Users\mason\Documents\virus") {
             Write-Host "Directory already exists"
-            Get-EventSubscriber -Force | Unregister-Event -Force | exit
+            
 	    
         } else {
             Invoke-Expression -Command .\call.ps1 
@@ -43,11 +43,15 @@ Function Register-Watcher {
 }
 
  Register-Watcher "$folder"
- $seconds = 200
+ $seconds = 7800
  while ($seconds -gt 0) {
      Write-Host "Time remaining: $seconds"
+    
      Start-Sleep -Seconds 1
      $seconds--
+
+
+
  }
 Write-Host "Script Finished!"
 
