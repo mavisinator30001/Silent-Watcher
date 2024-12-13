@@ -1,10 +1,7 @@
-REM Title:
-REM Author:
-REM Description:
-REM Title:
-REM Author:
-REM Description:
-REM Target:
+REM Title: Silent-Watcher-Initial
+REM Author: Mavisinator30001
+REM Description: See README.md
+REM Target: Windows Based Operating Systems
 DEFINE #DELAYTIME 1000
 DEFINE #DRIVELABEL DUCKY
 EXTENSION PASSIVE_WINDOWS_DETECT
