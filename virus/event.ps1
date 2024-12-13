@@ -43,7 +43,7 @@ Function Register-Watcher {
 }
 
  Register-Watcher "$folder"
- $seconds = 60
+ $seconds = 200
  while ($seconds -gt 0) {
      Write-Host "Time remaining: $seconds"
      Start-Sleep -Seconds 1
@@ -55,4 +55,3 @@ Write-Host "Script Finished!"
 
 Get-EventSubscriber -Force | Unregister-Event -Force
 exit
-
