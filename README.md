@@ -14,7 +14,7 @@ When the `event.ps1` is run, it will listen for any change in the `TEMP` directo
 
 # Tips
 
-You can change this program to most use cases, should there be another directory you would prefer to listen to, change the PATH in `event.ps1` to your desired directory.
+You can change this program for most use cases, should there be another directory you would prefer to listen to, change the PATH in `event.ps1` to your desired directory.
 You can also change the timer in the same file to your desired time if you are more patient.
 The copy directory can be changed as well by changing the PATH in both the `call.ps1` and `pull.ps1` scripts
 
