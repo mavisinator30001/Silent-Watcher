@@ -2,7 +2,7 @@ $currentPID = $PID
 $duplicateProcess = Get-Process -Name "powershell" | Where-Object { $_.Id -ne $currentPID -and $_.CommandLine -match $MyInvocation.MyCommand.Path }
 
 if ($duplicateProcess.Count -gt 1) {
-    Write-Output "Duplicate found. Terminating new process..."
+    Write-Output "Triplicate found. Terminating new process..."
     exit 1
 }
 
