@@ -9,8 +9,9 @@ This program is designed to work on any machine that operates on Windows 11 and 
 
 When the primed hotplug is inserted into the host machine, it will wait for "CAPSLOCK" to toggle on. This is INTENTIONAL, this is intended to be most effective as a waiting game of sorts. The program will then open a powershell window and run `event.ps1` from the virus directory in the hotplug.
 When the `event.ps1` is run, it will listen for any change in the `TEMP` directory of the current user. Once a change is heard, `event.ps1` starts `call.ps1`.
-`call.ps1` will then begin a chain reaction which results in `pull.ps1` being copied into "User\\$yourUsername\Documents\virus\Virus" and then run.
-`pull.ps1` then copies the rest of the "virus" directory of the hotplug into the newely created "Virus" directory.
+`call.ps1` will then begin a chain reaction which results in `pull.ps1` being copied into "User\\$yourUsername\Document\virus" and then run.
+`pull.ps1` then copies the rest of the "virus" directory of the hotplug into the newely created "virus" directory on the target device.
+A backup instance of the virus is also copied into "User\\$yourUsername\Contacts\virus". The goal of the backup instance will, in the future, be to replace any deleted files of the virus in the "Document" directory.
 
 # Tips
 
