@@ -1,17 +1,17 @@
 # Silent Watcher
 
-This is a combination of a DuckyScript payload and a virus template that I created.
+This is a combination of a DuckyScript payload and a "virus" template that I created.
 To use it, compile `payload.txt` and add it to the root directory of your hotplug. BE SURE TO READ THE CODE!
 Some variables are specific to your use case and you may find it in your interest to change them for your intended purposes.
 This program is designed to work on any machine that operates on Windows 11 and higher.
 
 # How Does It Work?
 
-When the primed hotplug is inserted into the host machine, it will wait for "CAPSLOCK" to toggle on. This is INTENTIONAL, this is intended to be most effective as a waiting game of sorts. The program will then open a powershell window and run `event.ps1` from the virus directory in the hotplug.
+When the primed hotplug is inserted into the host machine, it will wait for "CAPSLOCK" to toggle on. This is INTENTIONAL, this is intended to be most effective as a waiting game of sorts. The program will then open a powershell window and run `event.ps1` from the src directory in the hotplug.
 When the `event.ps1` is run, it will listen for any change in the `TEMP` directory of the current user. Once a change is heard, `event.ps1` starts `call.ps1`.
-`call.ps1` will then begin a chain reaction which results in `pull.ps1` being copied into "User\\$yourUsername\Document\virus" and then run.
-`pull.ps1` then copies the rest of the "virus" directory of the hotplug into the newely created "virus" directory on the target device.
-A backup instance of the virus is also copied into "User\\$yourUsername\Contacts\virus". The goal of the backup instance will, in the future, be to replace any deleted files of the virus in the "Document" directory.
+`call.ps1` will then begin a chain reaction which results in `pull.ps1` being copied into "User\\$yourUsername\Document\src" and then run.
+`pull.ps1` then copies the rest of the "src" directory of the hotplug into the newely created "src" directory on the target device.
+A backup instance of the src is also copied into "User\\$yourUsername\Contacts\src". The goal of the backup instance will, in the future, be to replace any deleted files of the src in the "Document" directory.
 
 # Tips
 
