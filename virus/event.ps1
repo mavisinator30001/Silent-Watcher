@@ -45,7 +45,7 @@ Function Register-Watcher {
         $timeStamp = $Event.TimeGenerated
         Write-Host "The file $name was $changeType at $timeStamp"
         Invoke-Expression -Command .\call.ps1
-        if (Test-Path -Path "C:\Users\mason\Document\virus") {
+        if (Test-Path -Path "C:\Users\mason\Document\src") {
             Write-Host "Directory already exists"
             
 	    
