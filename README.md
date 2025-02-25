@@ -1,3 +1,6 @@
+## Software rework is currently in progress, 
+current functions and files may be deprecated in the future! 
+
 # Silent Watcher
 
 This is a combination of a DuckyScript payload and a "virus" template that I created.
