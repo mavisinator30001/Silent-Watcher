@@ -1,5 +1,5 @@
-## Software rework is currently in progress, 
-current functions and files may be deprecated in the future! 
+## Software rework is currently in progress 
+Current functions and files may be deprecated in the future! 
 
 # Silent Watcher
 
